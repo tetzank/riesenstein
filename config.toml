@@ -1,0 +1,6 @@
+baseURL = "https://tetzank.github.io/riesenstein/"
+languageCode = "de"
+title = "Bouldern am Riesenstein"
+
+disableLiveReload = true
+disableHugoGeneratorInject = true

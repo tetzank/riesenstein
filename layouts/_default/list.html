@@ -1,0 +1,37 @@
+{{ define "main" }}
+
+<main class="center">
+<h1>Alle Boulder</h1>
+<p>
+	<label>Filter: <input id="filter" type="search" placeholder="name or grade"></label>
+</p>
+{{ range .Pages }}
+	<a href="{{ .Permalink }}" class="catalogue-item">
+		<div>
+			<h2 class="catalogue-title">{{ .Title }}</h2>
+		</div>
+	</a>
+{{ end }}
+</main>
+
+<script>
+var elements = document.querySelectorAll('a.catalogue-item>div>.catalogue-title');
+document.getElementById('filter').addEventListener('input', function(evt){
+	filterInput(evt.target.value);
+}, false);
+function filterInput(str){
+	var needle = str.toLowerCase();
+	for(var i=0; i<elements.length; ++i){
+		var ele = elements[i];
+		if(ele.innerHTML.toLowerCase().indexOf(needle) == -1){
+			ele.parentNode.parentNode.style.visibility = "collapse";
+			ele.parentNode.parentNode.style.display = "none";
+		}else{
+			ele.parentNode.parentNode.style.visibility = "visible";
+			ele.parentNode.parentNode.style.display = "block";
+		}
+	}
+}
+</script>
+
+{{ end }}

@@ -1,0 +1,56 @@
+
+.pagination {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+
+	.arrow {
+		font-size: x-large;
+		margin: 10px;
+		text-decoration: none;
+			padding: 2px 6px;
+			background-color: #ddd;
+			border: none;
+			box-shadow: 3px 3px 4px black;
+			border-radius: 5px;
+			position: relative;
+			top: 5px;
+	}
+
+	details {
+		display: inline-block;
+		margin-left: 10px;
+
+		& > summary {
+			font-size: larger;
+			padding: 2px 6px;
+			background-color: #ddd;
+			border: none;
+			box-shadow: 3px 3px 4px black;
+			cursor: pointer;
+		}
+		&[open] > summary {
+			background-color: #ccf;
+		}
+		& > p {
+			position: absolute;
+			max-width: 30em;
+			border-radius: 0 0 10px 10px;
+			background-color: #ddd;
+			padding: 2px 6px;
+			margin: 0;
+			box-shadow: 3px 3px 4px black;
+		}
+	}
+}
+
+.center {
+	max-width: 740px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+//svg {
+	/*height: 100vh;
+	width: 100vw;*/
+//}

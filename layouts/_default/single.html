@@ -1,0 +1,34 @@
+{{ define "main" }}
+
+<main>
+
+<div class="pagination">
+	{{- if .NextInSection }}
+	<a href="{{ .NextInSection.Permalink }}" class="arrow">&#11160;</a>
+	{{- end }}
+	<a href="/boulders/" class="arrow">&#8803;</a>
+	{{- if .PrevInSection }}
+	<a href="{{ .PrevInSection.Permalink }}" class="arrow">&#11162;</a>
+	{{- end }}
+	<details>
+		<summary>{{ .Title }} &#128712;</summary>
+		<p>{{ .Summary }}</p>
+	</details>
+</div>
+
+<svg width="{{.Params.width}}" height="{{.Params.height}}" xmlns="http://www.w3.org/2000/svg">
+<defs>
+	<marker id="head" orient="auto" viewBox="0 0 10 10" refX="1.8" refY="5" markerWidth="2.7" markerHeight="2.7">
+		<path d="M1 1 L9 4.5 L1 9 z" fill="black" stroke="black" stroke-linejoin="round" />
+	</marker>
+	<marker id="head2" orient="auto" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="4" markerHeight="4">
+		<path d="M1 1 L9 4.5 L1 9 z" fill="green" stroke="green" stroke-linejoin="round" />
+	</marker>
+</defs>
+
+{{ .Content }}
+
+</svg>
+</main>
+
+{{ end }}

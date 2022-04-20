@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{ .Title }}</title>
+		{{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
+		{{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options }}
+		<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+	</head>
+	<body>
+		<div id="content">
+			{{- block "main" . }}{{- end }}
+		</div>
+	</body>
+</html>
