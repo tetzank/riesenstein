@@ -251,7 +251,7 @@
 	<path stroke="black" stroke-width="0.8" d="m21,67 2.5,3.2" marker-end="url(#head)" />
 	<text dy="-2"><textPath href="#oberer" startOffset="80%">Philosophenweg</textPath></text>
 </a>
-<a href="/boulders/gorillahangel/">
+<a href="./boulders/gorillahangel/">
 	<path stroke="black" stroke-width="0.8" d="M120,103 v-4" marker-end="url(#head)" />
 	<!--<text dy="5"><textPath href="#unterer" startOffset="36.5%">Gorillahangel</textPath></text>-->
 	<text x="122" y="102">Gorillahangel</text>
