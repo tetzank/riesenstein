@@ -4,3 +4,11 @@ title = "Bouldern am Riesenstein"
 
 disableLiveReload = true
 disableHugoGeneratorInject = true
+
+# disable categories/ and tags/
+disableKinds = ["taxonomy", "term"]
+
+# only enable HTML output, RSS not needed (which is enabled by default)
+[outputs]
+  home    = ["HTML"]
+  section = ["HTML"]
