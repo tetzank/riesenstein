@@ -1,1 +1,6 @@
+{{- $file := printf "static/images/%s.avif" (.Get 0) }}
+{{- if fileExists $file }}
 <image href="{{.Site.BaseURL}}/images/{{.Get 0}}.avif" x="0" y="0" />
+{{- else }}
+<image href="{{.Site.BaseURL}}/images/{{.Get 0}}.jpg" x="0" y="0" />
+{{- end }}
