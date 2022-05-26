@@ -1,6 +1,8 @@
-{{- $file := printf "static/images/%s.avif" (.Get 0) }}
-{{- if fileExists $file }}
+{{- $file := add "static/images/" (.Get 0) -}}
+{{- if fileExists (add $file ".avif") -}}
 <image href="{{.Site.BaseURL}}/images/{{.Get 0}}.avif" x="0" y="0" />
-{{- else }}
+{{- else if fileExists (add $file ".webp") -}}
+<image href="{{.Site.BaseURL}}/images/{{.Get 0}}.webp" x="0" y="0" />
+{{- else -}}
 <image href="{{.Site.BaseURL}}/images/{{.Get 0}}.jpg" x="0" y="0" />
-{{- end }}
+{{- end -}}

@@ -6,7 +6,6 @@
 	{{- if .NextInSection }}
 	<a href="{{ .NextInSection.Permalink }}" class="arrow"><span class="icon">&#11160;</span></a>
 	{{- end }}
-	<a href=".." class="arrow">&#8803;</a>
 	{{- if .PrevInSection }}
 	<a href="{{ .PrevInSection.Permalink }}" class="arrow"><span class="icon">&#11162;</span></a>
 	{{- end }}
@@ -14,6 +13,8 @@
 		<summary>{{ .Title }} <span class="icon">&#128712;</span></summary>
 		<p>{{ .Summary }}</p>
 	</details>
+	<a href=".." class="arrow">&#8803;</a>
+	<a href="../.." class="arrow">&#8962;</a>
 </div>
 
 <svg width="{{.Params.width}}" height="{{.Params.height}}" xmlns="http://www.w3.org/2000/svg">
@@ -25,9 +26,7 @@
 		<path d="M1 1 L9 4.5 L1 9 z" fill="green" stroke="green" stroke-linejoin="round" />
 	</marker>
 </defs>
-
 {{ .Content }}
-
 </svg>
 </main>
 

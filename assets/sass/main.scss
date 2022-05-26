@@ -4,16 +4,22 @@
 	width: 100%;
 
 	.arrow {
-		font-size: x-large;
-		margin: 10px;
+		//@media only screen and (min-width:600px) {
+			font-size: x-large;
+			margin: 10px;
+		//}
+		//@media only screen and (max-width:600px) {
+		//	font-size: 42px;
+		//	margin: 20px;
+		//}
 		text-decoration: none;
-			padding: 2px 6px;
-			background-color: #ddd;
-			border: none;
-			box-shadow: 3px 3px 4px black;
-			border-radius: 5px;
-			position: relative;
-			top: 5px;
+		padding: 2px 6px;
+		background-color: #ddd;
+		border: none;
+		box-shadow: 3px 3px 4px black;
+		border-radius: 5px;
+		position: relative;
+		top: 5px;
 	}
 
 	details {
@@ -21,7 +27,12 @@
 		margin-left: 10px;
 
 		& > summary {
-			font-size: larger;
+			//@media only screen and (min-width:600px) {
+				font-size: larger;
+			//}
+			//@media only screen and (max-width:600px) {
+			//	font-size: 23px;
+			//}
 			padding: 2px 6px;
 			background-color: #ddd;
 			border: none;
