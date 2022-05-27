@@ -1,29 +1,23 @@
 ---
 title: "*Philosophenweg 7C"
-weight: 403
-width: 1152
-height: 864
+weight: 402
+width: 1280
+height: 800
 summary: "Vom großen Loch unter Treppe ohne unteren Block nach links queren. Um Kante herum und über Gerdina aussteigen."
 ---
 {{< img "philosophenweg" >}}
 
-<defs>
-<path id="philo"
-      d="M 954,313
-         C 954,313 390,510 357,511
-           324,513 195,511 147,489
-           129,477 78,478 82,421" />
-</defs>
-
-<g fill="none" stroke="black" stroke-width="8">
-  <use href="#philo" />
-  <path d="M82,421 C87,372 86,211 118,189" stroke-dasharray="10,5" marker-end="url(#head)" />
-  <path d="M700,720 l100,100 m-100,0 l100,-100" />
-</g>
-
-<g fill="none" stroke="green" stroke-width="4">
-  <use href="#philo" />
-  <path d="M82,421 C87,372 86,211 118,189" stroke-dasharray="10,5" marker-end="url(#head2)" />
-  <path d="M700,720 l100,100 m-100,0 l100,-100" stroke="red" />
-</g>
-
+{{< simplepath >}}
+M1157,333
+C1157,333 864,367 833,375
+ 809,382 713,509 623,518
+ 527,525 347,521 312,511
+ 276,501 44,487 22,388
+ 14,338 177,65 189,47
+{{< /simplepath >}}
+{{< redpath >}}
+M79,400
+C79,400 202,204 262,172
+ 285,158 369,72 412,50
+{{< /redpath >}}
+{{< redcross x="830" y="640" l="50" >}}

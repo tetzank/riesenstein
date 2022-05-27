@@ -1,32 +1,24 @@
 ---
 title: "Oberer Philosophenweg"
-weight: 404
-width: 1152
-height: 864
+weight: 403
+width: 1280
+height: 800
 summary: "Vom großen Loch unter Treppe ohne unteren Block und ohne großes Band nach links queren. Um Kante herum und über Gerdina aussteigen."
 ---
 {{< img "philosophenweg" >}}
 
-<defs>
-<path id="oberer"
-      d="M 954,313
-         C 954,313 586,393 553,394
-           520,396 411,390 361,390
-           297,393 271,462 228,466
-           193,466 183,466 142,459
-           100,445 91,456 85,418" />
-</defs>
-
-<g fill="none" stroke="black" stroke-width="8">
-  <use href="#oberer" />
-  <path d="M85,418 C91,381 105,213 126,186" stroke-dasharray="10,5" marker-end="url(#head)" />
-  <path d="M700,720 l100,100 m-100,0 l100,-100" />
-  <path d="M340,490 l50,50 m-50,0 l50,-50" />
-</g>
-
-<g fill="none" stroke="green" stroke-width="4">
-  <use href="#oberer" />
-  <path d="M85,418 C91,381 105,213 126,186" stroke-dasharray="10,5" marker-end="url(#head2)" />
-  <path d="M700,720 l100,100 m-100,0 l100,-100" stroke="red" />
-  <path d="M340,490 l50,50 m-50,0 l50,-50" stroke="red" />
-</g>
+{{< simplepath >}}
+M1157,333
+C1157,333 868,364 830,366
+ 803,366 720,367 630,376
+ 534,383 507,509 312,511
+ 274,508 44,487 22,388
+ 14,338 177,65 189,47
+{{< /simplepath >}}
+{{< redpath >}}
+M79,400
+C79,400 202,204 262,172
+ 285,158 369,72 412,50
+{{< /redpath >}}
+{{< redcross x="830" y="640" l="50" >}}
+{{< redcross x="610" y="500" l="30" >}}
