@@ -4,17 +4,17 @@
 
 <div class="pagination">
 	{{- if .NextInSection }}
-	<a href="{{ .NextInSection.Permalink }}" class="arrow"><span class="icon">&#11160;</span></a>
+	<a href="{{ .NextInSection.Permalink }}" title="Zurück" class="arrow"><span class="icon">&#11160;</span></a>
 	{{- end }}
 	{{- if .PrevInSection }}
-	<a href="{{ .PrevInSection.Permalink }}" class="arrow"><span class="icon">&#11162;</span></a>
+	<a href="{{ .PrevInSection.Permalink }}" title="Vorwärts" class="arrow"><span class="icon">&#11162;</span></a>
 	{{- end }}
 	<details>
 		<summary>{{ .Title }} <span class="icon">&#128712;</span></summary>
 		<p>{{ .Summary }}</p>
 	</details>
-	<a href=".." class="arrow">&#8803;</a>
-	<a href="../.." class="arrow">&#8962;</a>
+	<a href=".." title="zur Boulderliste" class="arrow">&#8803;</a>
+	<a href="../.." title="zur Hauptseite" class="arrow">&#8962;</a>
 </div>
 
 <svg width="{{.Params.width}}" height="{{.Params.height}}" xmlns="http://www.w3.org/2000/svg">
