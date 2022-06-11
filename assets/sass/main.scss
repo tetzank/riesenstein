@@ -6,11 +6,11 @@
 	.arrow {
 		//@media only screen and (min-width:600px) {
 			font-size: x-large;
-			margin: 10px;
+			margin: 0 10px;
 		//}
 		//@media only screen and (max-width:600px) {
 		//	font-size: 42px;
-		//	margin: 20px;
+		//	margin: 0 20px;
 		//}
 		text-decoration: none;
 		padding: 2px 6px;
@@ -24,7 +24,7 @@
 
 	details {
 		display: inline-block;
-		margin-left: 10px;
+		margin: 0 10px;
 
 		& > summary {
 			//@media only screen and (min-width:600px) {
@@ -50,14 +50,14 @@
 			padding: 2px 6px;
 			margin: 0;
 			box-shadow: 3px 3px 4px black;
+			z-index: 2;
 		}
 	}
 }
 
 .center {
 	max-width: 740px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 
 	p {
 		text-align: justify;
