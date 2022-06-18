@@ -241,7 +241,9 @@
 </g>
 
 <g style="font-size:5px;">
-<text dy="5"><textPath href="#oberer" startOffset="75%">Treppe</textPath></text>
+<a href="./boulders/treppenhangel/">
+	<text dy="5"><textPath href="#oberer" startOffset="75%">Treppe</textPath></text>
+</a>
 <path stroke="white" stroke-width="2" d="M108,72 h-7" />
 <path stroke="black" stroke-width="0.8" d="M108,72 h-7" marker-end="url(#head)" />
 <text x="109" y="73">Übergang</text>
@@ -283,6 +285,11 @@
 </a>
 <a href="./boulders/oberer-quergang/">
 	<text x="135" y="18">Oberer Quergang</text>
+</a>
+<a href="./boulders/versteckte-traverse/">
+	<path stroke="black" stroke-width="0.8" d="m204,28 4,-5" marker-end="url(#head)" />
+	<text x="180" y="25">Versteckte</text>
+	<text x="182" y="30">Traverse</text>
 </a>
 
 <path id="weg" style="fill:none;stroke:black;stroke-width:0.5;stroke-dasharray:2,1;"
