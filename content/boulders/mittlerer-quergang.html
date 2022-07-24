@@ -1,0 +1,45 @@
+---
+title: "Mittlerer Quergang 7A"
+weight: 503
+width: 3000
+height: 839
+summary: "originaler unterer Quergang, Boden war höher"
+---
+{{< img "wand" >}}
+
+{{< simplepath >}}
+M161,361
+C161,361 691,278 691,278
+ 691,278 1187,384 1187,384
+ 1187,384 1583,454 1583,454
+ 1583,454 1935,450 1935,450
+ 1935,450 2428,500 2504,491
+ 2579,482 2713,363 2945,443
+{{< /simplepath >}}
+{{< redpath >}}
+M2824,240
+C2744,182 2524,144 2460,140
+ 2404,136 2084,190 1926,122
+ 1848,98 1384,136 1298,138
+ 1180,142 688,114 624,116
+ 560,114 236,128 168,136
+{{< /redpath >}}
+
+<defs>
+	<pattern id="diagonalHatch" width="10" height="10" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+		<line x1="0" y1="0" x2="0" y2="10" style="stroke:red; stroke-width:3" />
+	</pattern>
+</defs>
+
+<path fill="url(#diagonalHatch)" stroke="red" stoke-width="3"
+	d="M146,689
+       C146,689 897,696 897,696
+        897,696 1490,702 1490,702
+        1490,702 1796,710 1796,710
+        1796,710 2348,764 2348,764
+        2348,764 2718,804 2718,804
+        2718,804 2600,838 2600,838
+        2600,838 728,834 728,834
+        728,834 144,804 144,804
+       Z"
+/>
