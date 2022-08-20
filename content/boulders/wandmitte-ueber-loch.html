@@ -1,0 +1,43 @@
+---
+title: "Wandmitte über Loch"
+weight: 506
+width: 1280
+height: 670
+summary: ""
+---
+{{< img "wand-oben" >}}
+
+{{< text x="340" y="130" >}}Top{{< /text >}}
+<circle cx="353" cy="153" r="13" fill="none" stroke="black" stroke-width="6"/>
+<circle cx="353" cy="153" r="13" fill="none" stroke="green" stroke-width="3"/>
+{{< redpath >}}
+M588,287
+C588,287 272,288 272,288
+{{< /redpath >}}
+{{< simplepath >}}
+M550,461
+C550,461 491,340 487,324
+ 483,309 489,260 475,237
+ 464,223 382,249 362,224
+ 348,207 352,168 352,168
+{{< /simplepath >}}
+
+<defs>
+	<pattern id="diagonalHatch" width="10" height="10" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+		<line x1="0" y1="0" x2="0" y2="10" style="stroke:red; stroke-width:3" />
+	</pattern>
+</defs>
+
+<path fill="url(#diagonalHatch)" stroke="red" stoke-width="3"
+	d="M351,293
+       C351,293 359,355 359,355
+        359,355 406,415 406,416
+        406,417 418,470 418,470
+        418,470 407,502 407,502
+        407,502 407,523 407,523
+        407,523 423,546 423,546
+        423,546 433,578 433,578
+        433,578 281,560 280,560
+        279,560 276,288 276,288
+       Z"
+/>
