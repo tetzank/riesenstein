@@ -18,7 +18,7 @@
 </div>
 
 <div id="container" style="width:{{.Params.width}}px;height:{{.Params.height}}px;">
-<svg viewBox="0 0 {{.Params.width}} {{.Params.height}}" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="{{.Params.x | default 0}} {{.Params.y | default 0}} {{.Params.width}} {{.Params.height}}" xmlns="http://www.w3.org/2000/svg">
 <defs>
 	<marker id="head" orient="auto" viewBox="0 0 10 10" refX="1.8" refY="5" markerWidth="2.7" markerHeight="2.7">
 		<path d="M1 1 L9 4.5 L1 9 z" fill="black" stroke="black" stroke-linejoin="round" />
