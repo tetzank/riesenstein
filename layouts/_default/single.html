@@ -43,6 +43,26 @@ function fit_width(event){
 }
 document.addEventListener('DOMContentLoaded', fit_width);
 screen.orientation.addEventListener('change', fit_width);
+
+let touchStartX=0;
+document.addEventListener('touchstart', e => {
+	touchStartX = e.changedTouches[0].screenX;
+});
+document.addEventListener('touchend', e => {
+	let touchEndX = e.changedTouches[0].screenX;
+	if(window.visualViewport.width > {{.Params.width}}){
+		{{- if .NextInSection }}
+		if((touchStartX + 100) < touchEndX){
+			window.location = "{{ .NextInSection.Permalink }}";
+		}
+		{{- end }}
+		{{- if .PrevInSection }}
+		if((touchStartX - 100) > touchEndX){
+			window.location = "{{ .PrevInSection.Permalink }}";
+		}
+		{{- end }}
+	}
+});
 </script>
 
 </main>
