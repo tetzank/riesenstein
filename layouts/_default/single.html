@@ -27,7 +27,7 @@
 		<path d="M1 1 L9 4.5 L1 9 z" fill="green" stroke="green" stroke-linejoin="round" />
 	</marker>
 </defs>
-{{ .Content }}
+{{ .Content -}}
 </svg>
 </div>
 
@@ -46,11 +46,13 @@ screen.orientation.addEventListener('change', fit_width);
 
 let touchStartX=0;
 document.addEventListener('touchstart', e => {
-	touchStartX = e.changedTouches[0].screenX;
+	if(e.touches.length == 1 && e.changedTouches.length == 1 && window.visualViewport.width >= {{.Params.width}}){
+		touchStartX = e.changedTouches[0].screenX;
+	}
 });
 document.addEventListener('touchend', e => {
-	let touchEndX = e.changedTouches[0].screenX;
-	if(e.changedTouches.length == 1 && window.visualViewport.width >= {{.Params.width}}){
+	if(e.touches.length == 1 && e.changedTouches.length == 1 && window.visualViewport.width >= {{.Params.width}}){
+		let touchEndX = e.changedTouches[0].screenX;
 		{{- if .NextInSection }}
 		if((touchStartX + 100) < touchEndX){
 			window.location = "{{ .NextInSection.Permalink }}";
