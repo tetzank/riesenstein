@@ -48,10 +48,12 @@ let touchStartX=0;
 document.addEventListener('touchstart', e => {
 	if(e.touches.length == 1 && e.changedTouches.length == 1 && window.visualViewport.width >= {{.Params.width}}){
 		touchStartX = e.changedTouches[0].screenX;
+	}else{
+		touchStartX = 0;
 	}
 });
 document.addEventListener('touchend', e => {
-	if(e.touches.length == 1 && e.changedTouches.length == 1 && window.visualViewport.width >= {{.Params.width}}){
+	if(e.changedTouches.length == 1 && window.visualViewport.width >= {{.Params.width}} && touchStartX!=0){
 		let touchEndX = e.changedTouches[0].screenX;
 		{{- if .NextInSection }}
 		if((touchStartX + 100) < touchEndX){
