@@ -1,2 +1,3 @@
+{{- $color := default "green" (.Get "color") -}}
 <text x="{{.Params.x}}" y="{{.Params.y}}" fill="black" stroke="black" stroke-width="3.5">{{.Inner}}</text>
-<text x="{{.Params.x}}" y="{{.Params.y}}" fill="green" stroke="green" stroke-width="1">{{.Inner}}</text>
+<text x="{{.Params.x}}" y="{{.Params.y}}" fill="{{$color}}" stroke="{{$color}}" stroke-width="1">{{.Inner}}</text>
