@@ -68,6 +68,12 @@
 	/*height: 100vh;
 	width: 100vw;*/
 //}
+svg a:hover {
+	fill: blue;
+	path {
+		fill: blue;
+	}
+}
 
 @font-face {
 	font-family: "My Symbols";

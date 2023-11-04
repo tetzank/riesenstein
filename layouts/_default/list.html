@@ -23,12 +23,37 @@ function filterInput(str){
 	var needle = str.toLowerCase();
 	for(var i=0; i<elements.length; ++i){
 		var ele = elements[i];
-		if(ele.innerHTML.toLowerCase().indexOf(needle) == -1){
-			ele.parentNode.parentNode.style.visibility = "collapse";
-			ele.parentNode.parentNode.style.display = "none";
-		}else{
+		if(ele.innerHTML.toLowerCase().includes(needle)){
 			ele.parentNode.parentNode.style.visibility = "visible";
 			ele.parentNode.parentNode.style.display = "block";
+		}else{
+			ele.parentNode.parentNode.style.visibility = "collapse";
+			ele.parentNode.parentNode.style.display = "none";
+		}
+	}
+}
+
+const urlParams = new URLSearchParams(window.location.search);
+const filterParam = urlParams.get('filter');
+if(filterParam != null){
+	document.getElementById('filter').value = filterParam;
+	filterInput(filterParam);
+}
+const gradeParam = urlParams.get('grade');
+if(gradeParam != null){
+	document.getElementById('filter').value = gradeParam;
+
+	const needle = " " + gradeParam.toLowerCase();
+	const needleP= needle + "+";
+	for(var i=0; i<elements.length; ++i){
+		const ele = elements[i];
+		const eleStr = ele.innerHTML.toLowerCase();
+		if(eleStr.includes(needle) && !eleStr.includes(needleP)){
+			ele.parentNode.parentNode.style.visibility = "visible";
+			ele.parentNode.parentNode.style.display = "block";
+		}else{
+			ele.parentNode.parentNode.style.visibility = "collapse";
+			ele.parentNode.parentNode.style.display = "none";
 		}
 	}
 }
