@@ -3,7 +3,7 @@
 	<head>
 		<title>{{ .Title }}</title>
 		{{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
-		{{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options }}
+		{{ $style := resources.Get "sass/main.scss" | css.Sass $options }}
 		<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 	</head>
 	<body>
