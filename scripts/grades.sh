@@ -3,7 +3,7 @@
 #grades=(4 5 6A 6B 6C 7A 7B 7C 8A 8B)
 grades=(4 5 6A 6A+ 6B 6B+ 6C 6C+ 7A 7A+ 7B 7B+ 7C 7C+ 8A 8A+ 8B 8B+)
 width=$((${#grades[@]}*30 + 30))
-base=120
+base=130
 
 echo "<svg width=\"$width\" height=\"$((base+30))\"
    version=\"1.1\"
@@ -13,7 +13,7 @@ echo "<svg width=\"$width\" height=\"$((base+30))\"
 
 <text x=\"20\" y=\"$((base-95))\" text-anchor=\"end\">10</text>
 <text x=\"20\" y=\"$((base-45))\" text-anchor=\"end\">5</text>
-<path d=\"M30 $base v-115\" stroke=\"black\" fill=\"none\" stroke-width=\"1\"/>
+<path d=\"M30 $base v-$((base-5))\" stroke=\"black\" fill=\"none\" stroke-width=\"1\"/>
 
 <path d=\"M30 $base h$width\" stroke=\"black\" fill=\"none\" stroke-width=\"1\"/>
 <path d=\"M30 $((base-50)) h$width\" stroke=\"black\" fill=\"none\" stroke-width=\"1\" stroke-dasharray=\"3\"/>
