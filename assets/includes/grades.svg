@@ -16,7 +16,7 @@
 	<text x="45" y="150" text-anchor="middle">4</text>
 </a>
 <a href="./boulders/?grade=5">
-	<path d="M75 130 h-7 v-80 h14 v80 z" stroke="black" fill="white" stroke-width="1" />
+	<path d="M75 130 h-7 v-90 h14 v90 z" stroke="black" fill="white" stroke-width="1" />
 	<text x="75" y="150" text-anchor="middle">5</text>
 </a>
 <a href="./boulders/?grade=6A">
@@ -28,7 +28,7 @@
 	<text x="135" y="150" text-anchor="middle">6A+</text>
 </a>
 <a href="./boulders/?grade=6B">
-	<path d="M165 130 h-7 v-100 h14 v100 z" stroke="black" fill="white" stroke-width="1" />
+	<path d="M165 130 h-7 v-110 h14 v110 z" stroke="black" fill="white" stroke-width="1" />
 	<text x="165" y="150" text-anchor="middle">6B</text>
 </a>
 <a href="./boulders/?grade=6B%2B">
