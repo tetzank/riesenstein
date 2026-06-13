@@ -1,5 +1,5 @@
 baseURL = "https://tetzank.github.io/riesenstein/"
-languageCode = "de"
+locale = "de"
 title = "Bouldern am Riesenstein"
 
 disableLiveReload = true
@@ -12,3 +12,7 @@ disableKinds = ["taxonomy", "term"]
 [outputs]
   home    = ["HTML"]
   section = ["HTML"]
+
+# enable all content types, otherwise HTML is disabled
+[security]
+  allowContent = ['.*']
